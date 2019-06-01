@@ -32,6 +32,7 @@ h3,
 h4,
 h5,
 h6,
+summary,
 p,
 span,
 a {
@@ -54,6 +55,11 @@ a {
   text-decoration: none;
 }
 
+a:focus,
+summary:focus {
+  outline-color: var(--primary-color);
+}
+
 ::selection {
   background: var(--highlight-color);
   opacity: 0.3;
@@ -67,18 +73,57 @@ p {
 body {
   background-color: var(--background-color);
 }
-@media only screen and (min-width: 768px) {
-  body {
-    margin: 0px auto;
-    max-width: 80vw;
-  }
+#infoSection {
+  order: 1;
+}
+#contactSection {
+  order: 6;
+}
 
+@media (min-width: 768px) {
   .contentContainer {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .cvSection {
+    width: 21rem;
   }
 }
-@media only screen and (max-width: 767px) {
+
+@media (min-width: 1070px) {
+  #languagesSection {
+    order: 2;
+  }
+  #educationSection {
+    order: 3;
+  }
+  #skillsSection {
+    order: 4;
+  }
+  #workExperienceSection {
+    order: 5;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1069px) {
+  #educationSection {
+    order: 5;
+  }
+
+  #languagesSection {
+    order: 2;
+  }
+
+  #skillsSection {
+    order: 4;
+  }
+
+  #workExperienceSection {
+    order: 3;
+  }
+}
+@media (max-width: 767px) {
   body {
     margin: 0px 1rem;
   }
@@ -99,6 +144,7 @@ h3 {
 
 .cvSection {
   margin: 0.5rem;
+  max-width: 30rem;
 }
 
 .boldStyle {
@@ -117,59 +163,12 @@ h3 {
   max-width: 11rem;
   max-height: 11rem;
   height: 8rem;
+  border-radius: 4rem;
 }
 
 .info {
   margin-left: 1rem;
 }
-
-/* 
-.themeSwitcher {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-}
-
-.title {
-  margin: 128px 8px;
-}
-
-.languageLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.languageItems {
-  margin: 8px 16px;
-}
-
-.active {
-  color: var(--primary-color);
-  text-decoration: underline;
-  opacity: 0.87;
-}
-
-.active:hover {
-  cursor: pointer;
-}
-
-.disable {
-  opacity: 0.38;
-} 
-
-.projectsContainer {
-  text-align: center;
-}
-
-.projectsContainer > img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 8px auto;
-}
-
-*/
 
 .contactItem {
   margin: 16px 4px;
@@ -184,8 +183,33 @@ footer {
 .svgIcon {
   opacity: 0.6;
   margin-right: 16px;
+  min-width: 18px;
 }
 
 .svgIconPath {
   fill: var(--primary-color);
+}
+
+@keyframes invisiblyGrowFontSize {
+  0% {
+    font-size: 0;
+    opacity: 0;
+  }
+  100% {
+    font-size: 1em;
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.details[open] .content {
+  animation-name: invisiblyGrowFontSize, fadeIn;
+  animation-duration: 100ms, 100ms;
+  animation-delay: 0ms, 100ms;
 }
