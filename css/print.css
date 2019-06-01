@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Open Sans";
+  font-display: fallback;
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
+  font-weight: 500;
+}
+
+:root {
+  --primary-color: #673ab7;
+  --highlight-color: #b39ddb;
+  --background-color: #fff;
+  --text-color: #000000;
+  --basic-unit: 16px;
+  --subheader-margin: 8px;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cvSection {
+  width: 21rem;
+}
+
+#infoSection {
+  order: 1;
+}
+#languagesSection {
+  order: 2;
+}
+#workExperienceSection {
+  order: 3;
+}
+#skillsSection {
+  order: 4;
+}
+#educationSection {
+  order: 5;
+}
+#contactSection {
+  order: 6;
+}
+
+h3,
+summary,
+p,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+h1,
+h2 {
+  font-size: 1.5rem;
+  opacity: 0.87;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  opacity: 1;
+}
+
+span,
+p {
+  opacity: 0.6;
+  display: block;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.subHeaderContainer {
+  margin-left: 1rem;
+}
+
+.dateRange {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cvSection {
+  margin: 0.5rem;
+  max-width: 30rem;
+}
+
+.boldStyle {
+  font-weight: bold;
+  opacity: 0.87;
+  display: inline-block;
+}
+
+.presentationHeader {
+  display: flex;
+  align-items: center;
+}
+
+.profilePicture {
+  width: 8rem;
+  max-width: 11rem;
+  max-height: 11rem;
+  height: 8rem;
+  border-radius: 4rem;
+}
+
+.info {
+  margin-left: 1rem;
+}
+
+.contactItem {
+  margin: 16px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.svgIcon {
+  opacity: 0.6;
+  margin-right: 16px;
+  min-width: 18px;
+}
+
+.svgIconPath {
+  fill: var(--primary-color);
+}
+
+.dontPrint {
+  display: none;
+}

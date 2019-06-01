@@ -10,7 +10,8 @@
       content="Soy Alejandro Di Leo y soy un Front end Developer. Éste es mi CV"
     />
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
     <title>Alejandro Di Leo</title>
   </head>
   <body>
@@ -72,16 +73,10 @@
                 - Webpack, Babel
               </p>
               <p>- REST API's</p>
-              <p>- MVC Backend applications</p>
-              <div style="margin-left: 16px">
-                <p>
-                  - Django, Laravel
-                </p>
-              </div>
             </div>
           </details>
           <p>- Different Git workflows</p>
-          <details class="details">
+          <details class="details dontPrint">
             <summary>The Atlassian stack</summary>
             <div style="margin-left: 16px" class="content">
               <p>
@@ -196,10 +191,11 @@
       </section>
     </div>
 
-    <footer>
+    <footer class="dontPrint">
       <span id="copyright" class="pinkText"></span>
     </footer>
 
     <script src="registerSW.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -70,6 +70,7 @@ p {
   opacity: 0.6;
   display: block;
 }
+
 body {
   background-color: var(--background-color);
 }
@@ -123,6 +124,7 @@ body {
     order: 3;
   }
 }
+
 @media (max-width: 767px) {
   body {
     margin: 0px 1rem;
