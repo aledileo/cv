@@ -215,3 +215,7 @@ footer {
   animation-duration: 100ms, 100ms;
   animation-delay: 0ms, 100ms;
 }
+
+.highlightText {
+  color: var(--primary-color);
+}
