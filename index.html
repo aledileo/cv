@@ -35,6 +35,22 @@
     <title>Alejandro's résumé</title>
   </head>
   <body>
+    <aside>
+      <div class="themeSwitcher" onclick="switchTheme();">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M24 0H0v24h24z" fill="none" />
+          <path
+            class="svgIconPath"
+            d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"
+          />
+        </svg>
+      </div>
+    </aside>
     <div class="contentContainer">
       <div class="cvSection" id="infoSection">
         <div class="nameContainer">
@@ -190,24 +206,24 @@
             <span>https://github.com/aledileo</span>
           </a>
         </div>
-        <!-- <div class="contactItem">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          class="svgIcon"
-        >
-          <path fill="none" d="M0 0h24v24H0V0z" />
-          <path
-            class="svgIconPath"
-            d="M12 7.77L18.39 18H5.61L12 7.77M12 4L2 20h20L12 4z"
-          />
-        </svg>
-        <a href="assets/CV.pdf">
-          <span>Éste es mi CV por si te interesa mi perfil</span>
-        </a>
-      </div> -->
+        <div class="contactItem dontPrint">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            class="svgIcon"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              class="svgIconPath"
+              d="M12 7.77L18.39 18H5.61L12 7.77M12 4L2 20h20L12 4z"
+            />
+          </svg>
+          <a href="assets/cv.pdf" download="Alejandro Di Leo - CV">
+            <span>Download this résumé</span>
+          </a>
+        </div>
       </section>
     </div>
 
@@ -219,6 +235,7 @@
     </footer>
 
     <script src="registerSW.js"></script>
+    <script src="js/themeHandler.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
