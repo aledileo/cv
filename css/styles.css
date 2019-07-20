@@ -35,7 +35,8 @@ h6,
 summary,
 p,
 span,
-a {
+a,
+.emoji {
   font-family: "Open Sans Light", sans-serif;
   font-weight: 300;
   color: var(--text-color);
@@ -68,7 +69,6 @@ summary:focus {
 span,
 p {
   opacity: 0.6;
-  display: block;
 }
 
 body {
@@ -147,6 +147,7 @@ h3 {
 .cvSection {
   margin: 0.5rem;
   max-width: 30rem;
+  flex-basis: 30%;
 }
 
 .boldStyle {
@@ -170,6 +171,8 @@ h3 {
 
 .info {
   margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .contactItem {
@@ -220,4 +223,10 @@ footer {
   position: absolute;
   top: 14px;
   right: 16px;
+}
+
+.emoji {
+  display: inline-flex;
+  width: 1.5rem;
+  justify-content: center;
 }
