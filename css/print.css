@@ -14,6 +14,10 @@
   --subheader-margin: 8px;
 }
 
+body {
+  margin: 3em;
+}
+
 .contentContainer {
   display: flex;
   justify-content: space-around;
